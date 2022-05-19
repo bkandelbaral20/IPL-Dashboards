@@ -6,17 +6,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
-import io.javabrains.ipldashboard.model.MatchGame;
+import io.javabrains.ipldashboard.model.Match;
 
 
-public class MatchDataProcessor implements ItemProcessor<MatchInput, MatchGame> {
+public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
   private static final Logger log = LoggerFactory.getLogger(MatchDataProcessor.class);
 
   @Override
-  public MatchGame process(final MatchInput matchInput) throws Exception {
+  public Match process(final MatchInput matchInput) throws Exception {
     
-    MatchGame match = new MatchGame();
+    Match match = new Match();
 
     match.setId(Long.parseLong(matchInput.getId() ));
     match.setCity(matchInput.getCity() );

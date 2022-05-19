@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 //we need this to save our csv file into database
 @Entity
-public class MatchGame {
+public class Match {
 
     @Id
    private long id;

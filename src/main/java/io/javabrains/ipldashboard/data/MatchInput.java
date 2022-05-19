@@ -4,11 +4,12 @@ public class MatchInput {
 
 // creating each variable as same as our csv files attribute values.
 
-   private String id;
+   private String id; 
    private String city;
    private String date;
    private String player_of_match;
    private String venue;
+   private String neutral_venue;
    private String team1;
    private String team2;
    private String toss_winner;
@@ -24,7 +25,7 @@ public class MatchInput {
 public String getId() {
     return id;
 }
-public void setId(long id) {
+public void setId(String id) {
     this.id = id;
 }
 public String getCity() {
@@ -50,6 +51,12 @@ public String getVenue() {
 }
 public void setVenue(String venue) {
     this.venue = venue;
+}
+public String getNeutral_venue() {
+    return neutral_venue;
+}
+public void setNeutral_venue(String neutral_venue) {
+    this.neutral_venue = neutral_venue;
 }
 public String getTeam1() {
     return team1;

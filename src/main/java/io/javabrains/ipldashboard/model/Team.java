@@ -1,9 +1,11 @@
 package io.javabrains.ipldashboard.model;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Team {
@@ -15,6 +17,9 @@ public class Team {
     private long totalMatches;
     private long totalWins;
 
+     //Creating a list to get the 3 latest match by the team 
+     @Transient
+     private List<Match> matches;
 
     public long getId() {
         return id;
@@ -40,6 +45,12 @@ public class Team {
     public void setTotalWins(long totalWins) {
         this.totalWins = totalWins;
     }
+    public List<Match> getMatches() {
+        return matches;
+    }
+    public void setMatches(List<Match> matches) {
+        this.matches = matches;
+    }
     
     //creating constructor 
     public Team(String teamName, long totalMatches) {
@@ -52,6 +63,9 @@ public class Team {
         return "Team [teamName=" + teamName + ", totalMatches=" + totalMatches + ", totalWins=" + totalWins + "]";
     }
 
+    public Team(){
+
+    }
 
     
 

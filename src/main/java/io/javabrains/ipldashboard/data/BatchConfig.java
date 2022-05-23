@@ -61,7 +61,7 @@ public JdbcBatchItemWriter<Match> writer(DataSource dataSource) {
   return new JdbcBatchItemWriterBuilder<Match>()
     .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>()) //we are displaying Match instances into a SQl table along with its values
     .sql("INSERT INTO match (id, city, date, player_of_match, venue, team1, team2, toss_winner, toss_decision, match_winner, result, result_margin, umpire1, umpire2)" 
-    + " VALUES (:id,:city,:date,:playerOfMatch, :venue,:Team1,:Team2,:tossWinner, :tossDecision,:matchWinner,:result, :resultMargin, :umpire1, :umpire2)" )
+    + " VALUES (:id,:city,:date,:playerOfMatch,:venue,:team1,:team2,:tossWinner, :tossDecision,:matchWinner,:result, :resultMargin, :umpire1, :umpire2)" )
     .dataSource(dataSource)
     //values should be same as Match class instances variables
     .build();

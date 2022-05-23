@@ -1,9 +1,9 @@
 package io.javabrains.ipldashboard.model;
 
 import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 //we need this to save our csv file into database
 @Entity
@@ -15,8 +15,8 @@ public class Match {
    private LocalDate date;
    private String playerOfMatch;
    private String venue;
-   private String Team1;
-   private String Team2;
+   private String team1;
+   private String team2;
    private String tossWinner;
    private String tossDecision;
    private String matchWinner;
@@ -56,18 +56,6 @@ public String getVenue() {
 public void setVenue(String venue) {
     this.venue = venue;
 }
-public String getTeam1() {
-    return Team1;
-}
-public void setTeam1(String team1) {
-    Team1 = team1;
-}
-public String getTeam2() {
-    return Team2;
-}
-public void setTeam2(String team2) {
-    Team2 = team2;
-}
 public String getTossWinner() {
     return tossWinner;
 }
@@ -79,6 +67,18 @@ public String getTossDecision() {
 }
 public void setTossDecision(String tossDecision) {
     this.tossDecision = tossDecision;
+}
+public String getTeam1() {
+    return team1;
+}
+public void setTeam1(String team1) {
+    this.team1 = team1;
+}
+public String getTeam2() {
+    return team2;
+}
+public void setTeam2(String team2) {
+    this.team2 = team2;
 }
 public String getMatchWinner() {
     return matchWinner;
@@ -110,7 +110,5 @@ public String getUmpire2() {
 public void setUmpire2(String umpire2) {
     this.umpire2 = umpire2;
 }
-public void setWinningteam(String winner) {
-}  
 
 }
